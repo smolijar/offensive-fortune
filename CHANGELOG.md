@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Ramda dep
 - install script
+- Readme
 
 ### Changed
 - Refactored whole index gibbersih into files
