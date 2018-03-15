@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.2.0] - 2018-03-15
 ### Added
 - Ramda dep
 - install script
@@ -28,7 +30,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Changelog
 - VERSION
 
-[Unreleased]: https://github.com/grissius/offensive-fortune/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/grissius/offensive-fortune/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/grissius/offensive-fortune/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/grissius/offensive-fortune/compare/v0.0.1...v0.1.0
 [0.0.1]: https://github.com/grissius/offensive-fortune/compare/v0.0.0...v0.0.1
 [0.0.0]: https://github.com/grissius/offensive-fortune/compare/0e1c31b...v0.0.0
