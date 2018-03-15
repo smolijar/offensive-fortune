@@ -21,7 +21,7 @@ const crawl = (start, process) => () => new Promise((resolve, reject) => {
       process(
         getDocument(res.body),
         results.push.bind(results),
-        compose(c.queue.bind(c), completeUri(uri.href))
+        compose(crawler.queue.bind(crawler), completeUri(uri.href))
       );
       done();
     }

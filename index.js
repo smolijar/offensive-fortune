@@ -1,8 +1,6 @@
 const vilejoke = require('./src/site/vilejoke');
-const fs = require('fs');
-
-const serialize = (results) => results.join('\n%\n');
+const writeFortune = require('./src/fortune');
 
 vilejoke()
-  .then(res => fs.writeFileSync(`./res`, serialize(res)))
+  .then(writeFortune)
   .catch(e => console.error(e))
