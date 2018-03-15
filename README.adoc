@@ -5,6 +5,8 @@
 
 A script for generating {fortune} cookie from the the funniest and most offensive stuff collected off the Internet.
 
+== About
+
 [WARNING]
 =====
 * I am not an author of any of the collected texts and the gathered results are not published in any form by myself.
@@ -16,30 +18,40 @@ There is no intention, nor result of focusing on a specific historical event, mi
 If you are easily offended think twice before using the script, or sharing your findings.
 =====
 
-== What
+=== What
 {nodejs} scraper/serializer of offensive jokes for {fortune}
 
 TIP: If you actually are offended by mere existence of this repository, please let me know with a reasonable complaint and I shall reconsider.
 
 
-== Why
+=== Why
 * {fortune} has a switch `-q` to select _only from potentially offensive aphorisms_. But it's wack. There's almost nothing offensive about it.
 * I adore dark offensive humor.
 * I recently started using shell greetings with {fortune} and {cowsay} and I was dying to do something to improve it and look forward to opening the terminal.
 * This is my procrastination project to kill the fleeing short period of time I have got left to finish my master thesis.
 * There might be more low lifeforms such as myself who share similar sense of humor.
 
-== Whatcha' need
+
+=== Where you get'em
+
+So far there is only a single source to scrape from, which is http://vilejoke.com[]
+
+== Usage
+
+=== Whatcha' need
 * {nodejs}
 * {fortune}
 
-== How
+=== Install
+
+*TLDR;* link:install.sh[]
+
+. Run script. It saves the result in `off-fortune`
+. Copy the result to fortune folder
+. Create proxy file
 
 Just take a beep into the install script: 
 include::install.sh[]
 
 The instructions should be rather clear.
 
-== Where you get'em
-
-So far there is only a single source to scrape from, which is http://vilejoke.com[]
