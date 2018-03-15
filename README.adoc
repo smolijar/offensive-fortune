@@ -1,6 +1,7 @@
 = offensive-fortune
 :fortune: https://en.wikipedia.org/wiki/Fortune_(Unix)[fortune]
 :nodejs: https://nodejs.org/en/[Node.js]
+:cowsay: https://en.wikipedia.org/wiki/Cowsay[cowsay]
 
 A script for generating {fortune} cookie from the the funniest and most offensive stuff collected off the Internet.
 
