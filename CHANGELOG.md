@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.0.1] - 2018-03-15
 ### Added
 - package.json
+- crawler and jsdom npm deps
+- vilejoke crawler (pagination + scraping)
+- fortune serialization
 
 ## [0.0.0] - 2018-03-15
 ### Added
