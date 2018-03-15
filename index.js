@@ -1,5 +1,6 @@
 const Crawler = require('crawler');
 const { JSDOM } = require('jsdom');
+const fs = require('fs');
 
 const getDocument = html => new JSDOM(html).window.document;
 
@@ -20,6 +21,7 @@ const process = (document , submitResults, pushUrl) => {
 
 const results = {};
 const submitResults = site => records => results[site] = (results[site] || []).concat(records);
+const serialize = (results) => results.join('\n%\n');
 
 const c = new Crawler({
   rateLimit: 1000,
@@ -33,6 +35,8 @@ const c = new Crawler({
 });
 
 c.on('drain', function(){
-  console.log(results);
+  Object.keys(results).forEach(source => {
+    fs.writeFileSync(`./${source}`, serialize(results[source]));
+  })
 });
 c.queue('http://vilejoke.com/index.php');
