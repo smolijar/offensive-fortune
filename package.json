@@ -1,0 +1,19 @@
+{
+  "name": "offensive-fortune",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grissius/offensive-fortune.git"
+  },
+  "author": "Jaroslav Šmolík <grissius@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grissius/offensive-fortune/issues"
+  },
+  "homepage": "https://github.com/grissius/offensive-fortune#readme"
+}
