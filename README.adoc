@@ -1,0 +1,44 @@
+= offensive-fortune
+:fortune: https://en.wikipedia.org/wiki/Fortune_(Unix)[fortune]
+:nodejs: https://nodejs.org/en/[Node.js]
+
+A script for generating {fortune} cookie from the the funniest and most offensive stuff collected off the Internet.
+
+[WARNING]
+=====
+* I am not an author of any of the collected texts and the gathered results are not published in any form by myself.
+* I do not promote any form of discriminative hate speech towards any minorities.
++
+I do realize, there are some very sensitive topics in the scraped material.
+There is no intention, nor result of focusing on a specific historical event, minority of ethnic, religious or any other origin or circumstance.
+* I do find most of the results funny, however it might contain disturbing and distasteful topics for broad audience.
+If you are easily offended think twice before using the script, or sharing your findings.
+=====
+
+== What
+{nodejs} scraper/serializer of offensive jokes for {fortune}
+
+TIP: If you actually are offended by mere existence of this repository, please let me know with a reasonable complaint and I shall reconsider.
+
+
+== Why
+* {fortune} has a switch `-q` to select _only from potentially offensive aphorisms_. But it's wack. There's almost nothing offensive about it.
+* I adore dark offensive humor.
+* I recently started using shell greetings with {fortune} and {cowsay} and I was dying to do something to improve it and look forward to opening the terminal.
+* This is my procrastination project to kill the fleeing short period of time I have got left to finish my master thesis.
+* There might be more low lifeforms such as myself who share similar sense of humor.
+
+== Whatcha' need
+* {nodejs}
+* {fortune}
+
+== How
+
+Just take a beep into the install script: 
+include::install.sh[]
+
+The instructions should be rather clear.
+
+== Where you get'em
+
+So far there is only a single source to scrape from, which is http://vilejoke.com[]
