@@ -1,27 +1,30 @@
 const Crawler = require('crawler');
 const { JSDOM } = require('jsdom');
+const { URL } = require('url');
 
 
 const getDocument = html => new JSDOM(html).window.document;
+const completeUri = (base, uri) => new URL(uri, base).href;
+
 
 const crawl = (start, process) => () => new Promise((resolve, reject) => {
-  let finalResult = [];
+  let results = [];
   const c = new Crawler({
     rateLimit: 1000,
     jQuery: false,
     callback: (err, res, done) => {
       const { uri } = res.request;
-
+      console.log(uri.href)
       if (err) {
         reject(error);
       }
-      process(getDocument(res.body), (res) => (finalResult = finalResult.concat(res)), (relurl) => c.queue(`${uri.protocol}//${uri.hostname}/${relurl}`));
+      process(getDocument(res.body), results.push.bind(results), (url) => c.queue(completeUri(uri.href, url)));
       done();
     }
   });
 
   c.on('drain', () => {
-    resolve(finalResult);
+    resolve(results.reduce((a,b) => a.concat(b)));
   });
 
   c.queue(start);
