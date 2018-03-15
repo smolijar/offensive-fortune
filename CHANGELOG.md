@@ -5,15 +5,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Ramda dep
+- install script
+
+### Changed
+- Refactored whole index gibbersih into files
 
 ## [0.1.0] - 2018-03-15
+### Added
+- vilejoke crawler (pagination + scraping)
+- fortune serialization
 
 ## [0.0.1] - 2018-03-15
 ### Added
 - package.json
 - crawler and jsdom npm deps
-- vilejoke crawler (pagination + scraping)
-- fortune serialization
 
 ## [0.0.0] - 2018-03-15
 ### Added
