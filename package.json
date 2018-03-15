@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/grissius/offensive-fortune/issues"
   },
-  "homepage": "https://github.com/grissius/offensive-fortune#readme"
+  "homepage": "https://github.com/grissius/offensive-fortune#readme",
+  "dependencies": {
+    "crawler": "^1.1.2",
+    "jsdom": "^11.6.2"
+  }
 }
