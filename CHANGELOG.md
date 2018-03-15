@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0] - 2018-03-15
+
 ## [0.0.1] - 2018-03-15
 ### Added
 - package.json
@@ -18,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Changelog
 - VERSION
 
-[Unreleased]: https://github.com/grissius/offensive-fortune/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/grissius/offensive-fortune/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/grissius/offensive-fortune/compare/v0.0.1...v0.1.0
 [0.0.1]: https://github.com/grissius/offensive-fortune/compare/v0.0.0...v0.0.1
 [0.0.0]: https://github.com/grissius/offensive-fortune/compare/0e1c31b...v0.0.0
