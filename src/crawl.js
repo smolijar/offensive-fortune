@@ -1,15 +1,15 @@
 const Crawler = require('crawler');
 const { JSDOM } = require('jsdom');
 const { URL } = require('url');
+const { curry, compose, flatten } = require('ramda');
 
 
 const getDocument = html => new JSDOM(html).window.document;
-const completeUri = (base, uri) => new URL(uri, base).href;
-
+const completeUri = curry((base, uri) => new URL(uri, base).href);
 
 const crawl = (start, process) => () => new Promise((resolve, reject) => {
   let results = [];
-  const c = new Crawler({
+  const crawler = new Crawler({
     rateLimit: 1000,
     jQuery: false,
     callback: (err, res, done) => {
@@ -18,16 +18,20 @@ const crawl = (start, process) => () => new Promise((resolve, reject) => {
       if (err) {
         reject(error);
       }
-      process(getDocument(res.body), results.push.bind(results), (url) => c.queue(completeUri(uri.href, url)));
+      process(
+        getDocument(res.body),
+        results.push.bind(results),
+        compose(c.queue.bind(c), completeUri(uri.href))
+      );
       done();
     }
   });
 
-  c.on('drain', () => {
-    resolve(results.reduce((a,b) => a.concat(b)));
+  crawler.on('drain', () => {
+    resolve(flatten(results));
   });
 
-  c.queue(start);
+  crawler.queue(start);
 });
 
 module.exports = crawl;

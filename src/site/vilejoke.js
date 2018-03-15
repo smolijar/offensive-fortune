@@ -15,6 +15,4 @@ const process = (document, submitResults, pushUrl) => {
   }
 }
 
-
-
 module.exports = crawl('http://vilejoke.com/index.php', process);

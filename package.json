@@ -18,6 +18,7 @@
   "homepage": "https://github.com/grissius/offensive-fortune#readme",
   "dependencies": {
     "crawler": "^1.1.2",
-    "jsdom": "^11.6.2"
+    "jsdom": "^11.6.2",
+    "ramda": "^0.25.0"
   }
 }
