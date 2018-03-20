@@ -62,7 +62,7 @@ TIP: If you actually are offended by mere existence of this repository, please l
 
 *TLDR;* link:install.sh[]
 
-. Run script. It saves the result in `off-fortune`
+. Run script. It saves the result in `toxic`
 . Copy the result to fortune folder
 . Create proxy file
 
