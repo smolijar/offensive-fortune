@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Source top-funny-jokes.com/offensive-jokes/
 
+### Changed
+- rename output to `toxic`
+
 ## [0.2.1] - 2018-03-16
 
 ## [0.2.0] - 2018-03-15
