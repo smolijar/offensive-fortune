@@ -49,7 +49,8 @@ TIP: If you actually are offended by mere existence of this repository, please l
 
 === Where you get'em
 
-So far there is only a single source to scrape from, which is http://vilejoke.com[]
+* http://vilejoke.com[vilejoke.com]
+* https://top-funny-jokes.com/offensive-jokes/[top-funny-jokes.com]
 
 == Usage
 
