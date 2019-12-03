@@ -31,9 +31,22 @@ A script for generating [fortune](https://en.wikipedia.org/wiki/Fortune_(Unix)) 
 ```
 
 ## Use
-
-TODO
-
+1. Run scraper and generate cookie
+```bash
+make
+```
+2. Add toxic cookie to your cookie sources
+```bash
+# move toxic to your fortune directory
+# your directory may be different, run `fortune -f` to find it
+sudo mv toxic toxic.dat /usr/share/fortune/off
+```
+3. Run fortune
+```bash
+fortune -o # run with all offensive cookie files (including others than toxic)
+fortune /usr/share/fortune/off/toxic # run only toxic cookie
+fortune /usr/share/fortune/off/toxic | cowsay # pipe result to cowsay!
+```
 ## License
 
 This project is licensed under [MIT](./LICENSE).
