@@ -43,12 +43,12 @@ func scrape(site Site, jokes chan string) {
 		href := e.Attr("href")
 		_, ok := visited[href]
 		if isURL(href) && !ok {
-			visited[href] = true
 			q.AddURL(href)
 		}
 	})
 
 	c.OnRequest(func(r *colly.Request) {
+		visited[r.URL.String()] = true
 		fmt.Println("Visiting", r.URL.String())
 	})
 	c.OnScraped(func(r *colly.Response) {
@@ -63,7 +63,7 @@ func scrape(site Site, jokes chan string) {
 
 var configuration = []Site{
 	Site{"https://top-funny-jokes.com/offensive-jokes/", ".su-list li", ""},
-	Site{"http://www.laughfactory.com/jokes/racist-jokes/9", ".joke-text p", ".next a"},
+	Site{"http://www.laughfactory.com/jokes/racist-jokes/", ".joke-text p", ".pagination li a"},
 	Site{"http://funnycomedianquotes.com/funny-jimmy-carr-jokes-and-quotes.html?p=1", ".quote", ".pages li a"},
 }
 
