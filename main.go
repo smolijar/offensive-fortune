@@ -40,7 +40,7 @@ func scrape(site Site, jokes chan string) {
 		jokes <- strings.TrimSpace(e.Text)
 	})
 	c.OnHTML(site.nextLink, func(e *colly.HTMLElement) {
-		href := e.Attr("href")
+		href := e.Request.AbsoluteURL(e.Attr("href"))
 		_, ok := visited[href]
 		if isURL(href) && !ok {
 			q.AddURL(href)
