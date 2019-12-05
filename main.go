@@ -28,7 +28,7 @@ func isURL(test string) bool {
 	return true
 }
 
-func scrape(site Site, jokes chan string) {
+func Scrape(site Site, jokes chan string) {
 	c := colly.NewCollector()
 	visited := make(map[string]bool)
 	q, _ := queue.New(
@@ -71,7 +71,7 @@ func main() {
 	jokemap := make(map[string]bool)
 	for _, config := range configuration {
 		ch := make(chan string)
-		go scrape(config, ch)
+		go Scrape(config, ch)
 		for j := range ch {
 			jokemap[j] = true
 		}
